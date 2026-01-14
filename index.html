@@ -11,7 +11,8 @@
     <title>WDD 231 - Web Frontend Development - Britney Thandeka Maulana</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,107 +23,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- JavaScript -->
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
     <div class="container">
 
-     <!--header-->   
-    <header>
-        <div class="logo">
-            <div class="logo-box"></div>
-            <span>
-            WDD 231 - Web Frontend Development - Britney Thandeka Maulana
-        </span>
-        </div>
-        <!-- Hamburger Button -->
-        <button id="menuButton" aria-label="Menu">
-            ☰
-        </button>
-     </header>   
-<!--nav-->
-    <nav id="navMenu">
-        <ul>
-            <li>Home</li>
-            <li>Chamber Project</li>
-            <li>Final Project</li>
-        </ul>
-    </nav>
-  
-<!--main-->
-    <main>
-        <h1>Home</h1>
-
-    <!-- ABOUT + PHOTO -->
-        <section class="top-grid">
-        <div class="card">
-         <div class="card-title">About Me</div>
-            <div class="card-body"> 
-                I enjoy coding and my love for this is rooted in the history
-                of the languages and how they were created. 
-                I love going to church and spending time with my family 
-                whenever I get the opportunity.I also enjoy cooking and baking.
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <div class="logo-box"></div>
+                <span>WDD 231 - Web Frontend Development - Britney Thandeka Maulana</span>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-title">Student Photo</div>
-            <div class="card-body">
-                <div class="photo"></div>
-                <img src="images/student.jpg" alt="Britney -Me">
-                </section>
-            </div>
-        </div>
-        </section>
+            <button id="menuButton" aria-label="Menu">☰</button>
+        </header>
 
+        <!-- NAV -->
+        <nav id="navMenu">
+            <ul>
+                <li>Home</li>
+                <li>Chamber Project</li>
+                <li>Final Project</li>
+            </ul>
+        </nav>
 
-        <!-- COURSES -->
-        <section class="courses">
-            <div class="card-title">Web Certificate Courses</div>
-            
-            <div class="course-grid">
-                <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('cse')">CSE</button>
-                <button onclick="filterCourses('wdd')">WDD</button>
-            
-                <div class="course wdd">WDD 130</div>
-                <div class="course wdd">WDD 131</div>
-                <div class="course wdd">WDD 231</div>
-            </div>
-            
-            <p class="credits">
-                The total credits for course listed above is 6
-            </p>
+        <!-- MAIN -->
+        <main>
+            <h1>Home</h1>
+
+            <!-- ABOUT + PHOTO -->
+            <section class="top-grid">
+
+                <div class="card">
+                    <h2 class="card-title">About Me</h2>
+                    <div class="card-body">
+                        I enjoy coding and my love for this is rooted in the history
+                        of the languages and how they were created.
+                        I love going to church and spending time with my family
+                        whenever I get the opportunity. I also enjoy cooking and baking.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">Student Photo</h2>
+                    <div class="card-body">
+                        <img src="images/student.jpg" alt="Britney Maulana">
+                    </div>
+                </div>
+
             </section>
-            </main>
 
+            <!-- COURSES -->
+            <section class="courses">
+                <div class="card-title">Web Certificate Courses</div>
 
-    <footer>
-        <!-- Item 1: Social links -->
-        <div class="social">
-            <a href="https://github.com/britneyliamaulana" target="_blank" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+                <div class="course-grid course-filters">
+                    <button data-filter="all">All</button>
+                    <button data-filter="CSE">CSE</button>
+                    <button data-filter="WDD">WDD</button>
+                </div>
 
-            <a href="https://www.linkedin.com/in/britneymaulana/" target="_blank" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+                <div id="courseList"></div>
 
-            <a href="https://instagram.com/britneyslia" target="_blank" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+                <p id="totalCredits" class="credits"></p>
+            </section>
 
-            <a href="mailto:maulanathandeka@gmail.com" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
+        </main>
 
-        <!-- Item 2: Dynamic copyright -->
-        <p>&copy; <span id="currentyear"></span>  Britney Thandeka Maulana | South Africa</p>
-        <p id="lastModified"></p>
-    </footer>
+        <!-- FOOTER -->
+        <footer>
+            <div class="social">
+                <a href="https://github.com/britneyliamaulana" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
+                <a href="https://www.linkedin.com/in/britneymaulana/" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://instagram.com/britneyslia" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:maulanathandeka@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <p>&copy; <span id="currentyear"></span> Britney Thandeka Maulana | South Africa</p>
+            <p id="lastModified"></p>
+        </footer>
+
+    </div>
 </body>
 
 </html>

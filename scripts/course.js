@@ -1,25 +1,3 @@
-// ===== Responsive Menu =====
-const menuButton = document.getElementById("menuButton");
-const navMenu = document.getElementById("navMenu");
-
-if (menuButton && navMenu) {
-    menuButton.addEventListener("click", () => {
-        navMenu.style.display =
-            navMenu.style.display === "block" ? "none" : "block";
-    });
-}
-
-
-// getdates.js
-
-// ✅ Get the current year and display it in the footer span
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-// ✅ Get the last modified date of the document
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-
-
-
 // ===== Certificate Courses =====
 const courses = [
     { code: "WDD 130", type: "WDD", credits: 3, completed: true },
@@ -34,6 +12,8 @@ const totalCredits = document.getElementById("totalCredits");
 const filterButtons = document.querySelectorAll(".course-filters button");
 
 function displayCourses(filter) {
+    if (!courseList || !totalCredits) return;
+
     courseList.innerHTML = "";
     let total = 0;
 
@@ -52,7 +32,8 @@ function displayCourses(filter) {
         }
     });
 
-    totalCredits.textContent = total;
+    totalCredits.textContent = `The total credits for course listed above is ${total}`;
+
 }
 
 // Filter buttons
@@ -64,3 +45,4 @@ filterButtons.forEach(button => {
 
 // Default display
 displayCourses("all");
+
