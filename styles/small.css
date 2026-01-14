@@ -69,7 +69,7 @@ header {
 /* NAV */
 nav {
     display: none;
-    background: var(--accent);
+    background: gray;
 }
 
 nav ul {
