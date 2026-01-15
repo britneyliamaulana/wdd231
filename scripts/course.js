@@ -15,25 +15,32 @@ function displayCourses(filter) {
     if (!courseList || !totalCredits) return;
 
     courseList.innerHTML = "";
-    let total = 0;
 
-    courses.forEach(course => {
-        if (filter === "all" || course.type === filter) {
-            const div = document.createElement("div");
-            div.textContent = course.code;
-            div.classList.add("course-item");
+    // Filter courses based on user selection
+    const filteredCourses = courses.filter(course =>
+        filter === "all" || course.type === filter
+    );
 
-            if (course.completed) {
-                div.classList.add("completed");
-            }
+    // Display filtered courses
+    filteredCourses.forEach(course => {
+        const div = document.createElement("div");
+        div.textContent = course.code;
+        div.classList.add("course-item");
 
-            courseList.appendChild(div);
-            total += course.credits;
+        if (course.completed) {
+            div.classList.add("completed");
         }
+
+        courseList.appendChild(div);
     });
 
-    totalCredits.textContent = `The total credits for course listed above is ${total}`;
+    // ✅ Calculate total credits using reduce (rubric requirement)
+    const total = filteredCourses.reduce(
+        (sum, course) => sum + course.credits,
+        0
+    );
 
+    totalCredits.textContent = `The total credits for courses listed above is ${total}`;
 }
 
 // Filter buttons
@@ -45,4 +52,3 @@ filterButtons.forEach(button => {
 
 // Default display
 displayCourses("all");
-
