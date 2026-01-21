@@ -44,14 +44,6 @@ header img {
     height: auto;
 }
 
-/* Hamburger button */
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-}
 
 /* ===== NAVIGATION ===== */
 nav {
@@ -77,6 +69,15 @@ nav a {
 nav a.active {
     background-color: var(--secondary-color);
     color: #000;
+}
+
+/* Hamburger button */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* ===== MAIN ===== */
@@ -168,7 +169,7 @@ main {
 }
 
 /* Optional: smaller text on mobile */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     footer {
         flex-direction: column;
         text-align: left;
@@ -183,15 +184,16 @@ main {
          display: block;
         }
     
-    .nav-links {
-         display: none;
-         flex-direction: column;
-        width: 100%;
-        margin-top: 1rem;
-    }
-    
-    .nav-links.show {
-         display: flex;
-    }
+  #primaryNav {
+      display: none;
+  }
+
+  #primaryNav.open {
+      display: block;
+  }
+
+         .directory-controls {
+             display: none;
+         }
 }
 

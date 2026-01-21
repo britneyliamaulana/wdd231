@@ -1,8 +1,8 @@
-// Hamburger Menu
-// --------------------
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.getElementById("primaryNav");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-});
+if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+}
