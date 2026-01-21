@@ -1,10 +1,8 @@
-// ===== Responsive Menu =====
-const menuButton = document.getElementById("menuButton");
-const navMenu = document.getElementById("navMenu");
+//  Hamburger menu toggle
+const toggleBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-if (menuButton && navMenu) {
-    menuButton.addEventListener("click", () => {
-        navMenu.style.display =
-            navMenu.style.display === "block" ? "none" : "block";
-    });
-}
+toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    toggleBtn.textContent = navLinks.classList.contains('show') ? '✖' : '☰';
+});

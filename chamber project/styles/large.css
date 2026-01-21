@@ -1,0 +1,100 @@
+@media (min-width: 768px) {
+
+    /* ===== ROOT VARIABLES ===== */
+        :root {
+            --primary-color: #338bf0b2;
+            --secondary-color: #f2f2f2;
+            --background-color: #558fc99e;
+            --text-color: #222;
+            --light-gray: #e0e0e0;
+            --pink-color: #f0c5e8;
+        }
+
+    /* ===== HEADER ===== */
+    #menuButton {
+        display: none;
+    }
+
+    header h1{
+        justify-content: left;
+        margin-right: 69rem;
+        color: rgb(251, 251, 251);
+        font-size: 22px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav li {
+        border: none;
+    }
+
+/* ===== HERO ===== */
+        .hero {
+            position: relative;
+            height:693px;
+            background: #f3e5e5;
+            border: 2px solid #f4d9e3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .hero img {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+
+        }
+
+        .hero button {
+            position: absolute;
+            right: 2rem;
+            bottom: 1rem;
+            background-color: rgb(255, 252, 255);
+            
+        }
+
+                
+    /* ===== MAIN ===== */
+    main {
+        max-width: 2100px;
+        margin: 0 auto;
+    }
+
+    main buttons {
+        border: #f4d9e3;
+    }
+
+    /* ===== DIRECTORY GRID ===== */
+    
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* ===== FOOTER ===== */
+
+footer {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 1rem;
+    align-items: center;
+    color:#ffffff;
+}
+
+.social a {
+    margin: 0 0.5rem;
+    color: rgb(250, 250, 250);
+    font-size: 1.5rem;
+}
+}

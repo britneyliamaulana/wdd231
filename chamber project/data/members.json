@@ -1,0 +1,81 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "Maria’s Boutique",
+            "address": "123 Market Street, Timbuktu, Mali",
+            "phone": "(223) 555-1010",
+            "website": "https://www.mariasboutique.com",
+            "image": "marias-boutique.jpg",
+            "membership": "Gold",
+            "description": "A locally owned boutique offering handmade clothing and accessories.",
+            "persona": "Small Business Owner"
+        },
+        {
+            "id": 2,
+            "name": "Diego Enterprises",
+            "address": "456 Commerce Avenue, Timbuktu, Mali",
+            "phone": "(223) 555-2020",
+            "website": "https://www.diegoenterprises.com",
+            "image": "diego-enterprises.jpg",
+            "membership": "Silver",
+            "description": "A large corporation focused on regional development and strategic partnerships.",
+            "persona": "Corporate Executive"
+        },
+        {
+            "id": 3,
+            "name": "Francisco Community Services",
+            "address": "789 Unity Road, Timbuktu, Mali",
+            "phone": "(223) 555-3030",
+            "website": "https://www.franciscoservices.org",
+            "image": "francisco-services.jpg",
+            "membership": "Member",
+            "description": "A community-focused organization helping new residents connect with local services.",
+            "persona": "New Resident"
+        },
+        {
+            "id": 4,
+            "name": "Amina Tech Solutions",
+            "address": "321 Innovation Drive, Timbuktu, Mali",
+            "phone": "(223) 555-4040",
+            "website": "https://www.aminatechsolutions.com",
+            "image": "amina-tech.jpg",
+            "membership": "Gold",
+            "description": "A technology firm providing web development, IT support, and digital solutions for local businesses.",
+            "persona": "Tech Entrepreneur"
+        },
+        {
+            "id": 5,
+            "name": "Sahara Fresh Market",
+            "address": "654 Desert Lane, Timbuktu, Mali",
+            "phone": "(223) 555-5050",
+            "website": "https://www.saharafreshmarket.com",
+            "image": "sahara-fresh.jpg",
+            "membership": "Silver",
+            "description": "A family-owned grocery market specializing in fresh produce and local goods.",
+            "persona": "Local Shopper"
+        },
+        {
+            "id": 6,
+            "name": "Timbuktu Fitness Center",
+            "address": "987 Wellness Blvd, Timbuktu, Mali",
+            "phone": "(223) 555-6060",
+            "website": "https://www.timbuktufitness.com",
+            "image": "timbuktu-fitness.jpg",
+            "membership": "Member",
+            "description": "A modern fitness center offering gym facilities, group classes, and personal training.",
+            "persona": "Health Enthusiast"
+        },
+        {
+            "id": 7,
+            "name": "Whimsy River Tours",
+            "address": "159 Riverfront Way, Timbuktu, Mali",
+            "phone": "(223) 555-7070",
+            "website": "https://www.nigerrivertours.com",
+            "image": "Whimsy-river-tours.jpg",
+            "membership": "Gold",
+            "description": "A tourism company providing guided river tours and cultural experiences in the region.",
+            "persona": "Tourist"
+        }                                                                                              
+    ]
+}
