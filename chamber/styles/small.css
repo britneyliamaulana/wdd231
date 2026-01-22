@@ -144,7 +144,8 @@ main {
 
 .footer-left,
 .footer-right {
-    flex: 1;
+    flex: unset;
+    width: 100%;
 }
 
 .footer-left h4 {
@@ -155,6 +156,7 @@ main {
 .footer-center {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .footer-center img {
@@ -172,7 +174,7 @@ main {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         background-color: #2875c2;
         color: #ffffff;
         font-size: 0.5rem;
