@@ -1,6 +1,7 @@
 /* ===== ROOT ===== */
 :root {
-    --primary-color: #338bf0b2;
+    /* ===== ROOT  ===== */
+    --primary-color: #2875c2;
     --secondary-color: #f2f2f2;
     --background-color: #558fc99e;
     --text-color: #222;
@@ -172,7 +173,7 @@ main {
     footer {
         flex-direction: column;
         text-align: left;
-        background-color: #338bf0b2;
+        background-color: #2875c2;
         color: #ffffff;
         font-size: 0.5rem;
         padding: 2rem 1rem;

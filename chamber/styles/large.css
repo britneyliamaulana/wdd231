@@ -2,7 +2,7 @@
 
     /* ===== ROOT  ===== */
         :root {
-            --primary-color: #338bf0b2;
+            --primary-color: #2875c2;
             --secondary-color: #f2f2f2;
             --background-color: #558fc99e;
             --text-color: #222;
@@ -17,7 +17,7 @@
 
     header h1{
         justify-content: left;
-        margin-right: 69rem;
+        margin-right: 940px;
         color: rgb(251, 251, 251);
         font-size: 22px;
     }
@@ -29,10 +29,11 @@
     nav ul {
         display: flex;
         gap: 1rem;
+      margin-left: 120px;
     }
 
-    nav li {
-        border: none;
+
+
     }
 
 /* ===== HERO ===== */
@@ -96,5 +97,4 @@ footer {
     margin: 0 0.5rem;
     color: rgb(250, 250, 250);
     font-size: 1.5rem;
-}
 }
