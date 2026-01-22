@@ -1,3 +1,4 @@
+//directory
 const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#gridView");
 const listButton = document.querySelector("#listView");

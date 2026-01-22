@@ -1,4 +1,4 @@
-// ===== Dates =====
+// ===== DateS =====
 
 // Get the current year
 const currentYearSpan = document.getElementById("currentyear");
