@@ -1,14 +1,5 @@
 @media (min-width: 768px) {
 
-    /* ===== ROOT  ===== */
-        :root {
-            --primary-color: #2875c2;
-            --secondary-color: #f2f2f2;
-            --background-color: #558fc99e;
-            --text-color: #222;
-            --light-gray: #e0e0e0;
-            --pink-color: #f0c5e8;
-        }
 
     /* ===== HEADER ===== */
     #menuButton {
@@ -18,7 +9,7 @@
     header h1{
         justify-content: left;
         margin-right: 940px;
-        color: rgb(251, 251, 251);
+        color: #ffffff;
         font-size: 22px;
     }
 
@@ -40,7 +31,7 @@
         .hero {
             position: relative;
             height:693px;
-            background: #f3e5e5;
+            background: #ffffff;
             border: 2px solid #f4d9e3;
             display: flex;
             justify-content: center;
@@ -60,7 +51,7 @@
             position: absolute;
             right: 2rem;
             bottom: 1rem;
-            background-color: rgb(255, 252, 255);
+            background-color:#ffffff;
             
         }
 
@@ -75,13 +66,14 @@
         border: #f4d9e3;
     }
 
-    /* ===== DIRECTORY GRID ===== */
-    
-    .grid-view {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* ===== FOOTER ===== */
+
+.footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
 
-    /* ===== FOOTER ===== */
 
 footer {
     background-color: var(--primary-color);
@@ -94,7 +86,5 @@ footer {
 }
 
 .social a {
-    margin: 0 0.5rem;
-    color: rgb(250, 250, 250);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
