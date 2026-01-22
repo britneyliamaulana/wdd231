@@ -67,14 +67,6 @@
     }
 
     /* ===== FOOTER ===== */
-
-.footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-
 footer {
     background-color: var(--primary-color);
     display: grid;
@@ -85,6 +77,3 @@ footer {
     color:#ffffff;
 }
 
-.social a {
-    font-size: 2rem;
-}
