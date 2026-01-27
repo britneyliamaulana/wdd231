@@ -1,79 +1,117 @@
+/* ===== LARGE SCREENS ===== */
 @media (min-width: 768px) {
-
 
     /* ===== HEADER ===== */
     #menuButton {
         display: none;
     }
 
-    header h1{
-        justify-content: left;
-        margin-right: 940px;
+    header h1 {
         color: #ffffff;
-        font-size: 22px;
-    }
-
-    nav {
-        display: block;
+        font-size: 19px;
+        margin: 0 12px;
+        padding: 17px 0;
+        text-align: left;
+        position: static;
+        /* Reset mobile offset */
+        left: 0;
     }
 
     nav ul {
         display: flex;
+        list-style: none;
+            /* remove bullets */
         gap: 1rem;
-      margin-left: 120px;
+        margin-left: 120px;
     }
 
-
-
+    nav a {
+        padding: 0.75rem 1rem;
     }
 
-/* ===== HERO ===== */
-        .hero {
-            position: relative;
-            height:693px;
-            background: #ffffff;
-            border: 2px solid #f4d9e3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 1rem;
-        }
+    .menu-toggle {
+        display: none;
+        /* hide hamburger on desktop */
+    }
 
-        .hero img {
-            width:100%;
-            height:100%;
-            object-fit: cover;
+    #primaryNav {
+        display: block;
+        /* show nav on desktop */
+    }
 
-        }
+    /* ===== HERO ===== */
+    .hero {
+        position: relative;
+        height: 693px;
+        background: #ffffff;
+        border: 2px solid #f4d9e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
-        .hero button {
-            position: absolute;
-            right: 2rem;
-            bottom: 1rem;
-            background-color:#ffffff;
-            
-        }
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-                
+    .hero button {
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+        background-color: #ffffff;
+    }
+
     /* ===== MAIN ===== */
     main {
         max-width: 2100px;
         margin: 0 auto;
+        padding: 0 2rem 2rem;
     }
 
-    main buttons {
-        border: #f4d9e3;
+    .business-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
     }
 
     /* ===== FOOTER ===== */
-footer {
-    background-color: var(--primary-color);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    padding: 1rem;
-    align-items: center;
-    color:#ffffff;
-}
+    footer {
+        background-color: var(--primary-color);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+        padding: 1rem 2rem;
+        align-items: center;
+        color: #ffffff;
+    }
 
+    .footer-left h4 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-left p,
+    .footer-right p {
+        font-size: 1rem;
+        margin: 0.25rem 0;
+    }
+
+    .footer-center {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .footer-center img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social a {
+        font-size: 2rem;
+    }
+}
