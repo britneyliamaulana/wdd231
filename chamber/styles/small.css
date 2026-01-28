@@ -154,6 +154,10 @@ main {
     border: 1px solid #999;
 }
 
+a.event-link{
+    color: #0346ff;
+}
+
 .card h2 {
     background: #333;
     color: #fff;
@@ -181,7 +185,7 @@ main {
 }
 
 .spotlight-card a {
-    color: #389fe8;
+    color: #0346ff;
     text-decoration: none;
     font-weight: bold;
 }
