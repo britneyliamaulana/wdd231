@@ -42,6 +42,7 @@ a {
 
 /* ===== HEADER ===== */
 .header-content {
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
