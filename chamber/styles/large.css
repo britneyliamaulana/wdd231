@@ -1,6 +1,16 @@
 /* ===== LARGE SCREENS ===== */
 @media (min-width: 768px) {
 
+    /* ===== ROOT ===== */
+:root {
+    --primary-color: #2875c2;
+    --secondary-color: #f2f2f2;
+    --background-color: #558fc99e;
+    --text-color: #222;
+    --light-gray: #e0e0e0;
+    --pink-color: #f0c5e8;
+}
+
     /* ===== HEADER ===== */
     #menuButton {
         display: none;
@@ -72,12 +82,48 @@
         padding: 0 2rem 2rem;
     }
 
+    .info-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+    }
+
     .business-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        margin-top: 2rem;
+        background-color: #f0f0f0;
+        margin-top: 1rem;
     }
+
+    .business-grid>h2 {
+        background-color: #242525;
+        color: #fff;
+        padding: 1px;
+        margin: -1rem -1rem 1rem;
+    }
+
+   #spotlight-container {
+       display: flex;
+       gap: 5rem;
+       padding: 1rem;
+   }
+
+   .spotlight-card img {
+       max-width: 200px;
+       margin: 0.5rem auto;
+       display: block;
+   }
+
+   .spotlight-card {
+       background-color: #ffffff;
+       border: 1px solid #94c6ff;
+       border-radius: 1px;
+       padding: 5rem;
+       text-align: center;
+       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+       transition: transform 0.2s ease, box-shadow 0.2s ease;
+   }
 
     /* ===== FOOTER ===== */
     footer {
@@ -112,6 +158,8 @@
     }
 
     .social a {
+        margin: 0 0.5rem;
+        color: #ffffff;
         font-size: 2rem;
     }
 }
