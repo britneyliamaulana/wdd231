@@ -61,6 +61,7 @@ header h4 {
     left: -180px; 
 }
 
+
 header img {
     width: 70px;
     height: auto;
@@ -254,6 +255,17 @@ a.event-link{
             position: static;
             /* Reset mobile offset */
             left: 0;
+    }
+
+    header h1{
+        color: #ffffff;
+        font-size: 19px;
+        margin: 0 12px;
+        padding: 17px 0;
+        text-align: left;
+        position: static;
+        /* Reset mobile offset */
+        left: 0;
     }
 
     nav ul {
