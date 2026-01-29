@@ -51,14 +51,14 @@ a {
     border-bottom: 2px solid #f9f8f8;
 }
 
-header h1 {
+header h4 {
     color: #ffffff;
     font-size: 19px;
     margin: 0 auto;
     flex-grow: 1;
     text-align: center;
     position: relative;
-    left: -295px; 
+    left: -180px; 
 }
 
 header img {
@@ -245,7 +245,7 @@ a.event-link{
 
 
 @media (max-width: 768px) {
-    header h1 {
+    header h4 {
             color: #ffffff;
             font-size: 19px;
             margin: 0 12px;
