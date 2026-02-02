@@ -100,6 +100,13 @@ nav a.active {
     cursor: pointer;
 }
 
+
+/*THANK YOU HTML*/
+.submission-details {
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
 /* ===== DIRECTORY ===== */
 #members {
     gap: 1rem;
@@ -266,6 +273,31 @@ a.event-link{
         position: static;
         /* Reset mobile offset */
         left: 0;
+    }
+
+    .membership-card{
+        display: column;
+        background-color: #ffffff;
+        border-top-left-radius: 34px;
+        border-bottom-right-radius: 34px;
+        text-align: center;
+        opacity: 0;
+        box-shadow: 0 10px 25px rgba(red, green, blue, alpha);
+        transform: scale(0.8) translateY(20px);
+        animation: popUp 0.6s cubic-bezier(.34, 1.56, .64, 1) forwards;
+    }
+
+    @keyframes popUp {
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    form label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.8rem;
     }
 
     nav ul {

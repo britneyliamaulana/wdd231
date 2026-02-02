@@ -50,58 +50,44 @@
 
     /* JOIN */
     .join-container {
-         display: grid;
+        display: grid;
         gap: 2rem;
+        grid-template-columns: 2fr 2fr;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-        form label {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1rem;
-        }
-    
-        textarea {
-            min-height: 100px;
-        }
-    
-        /* Membership cards animation on page load */
-        .membership-cards {
-            display: grid;
-            gap: 1rem;
-            opacity: 0;
-            animation: fadeIn 1.2s ease forwards;
-        }
-    
-        .membership-card {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            border-radius: 6px;
-            background-color: #f9f9f9;
-        }
-    
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-    
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    
-        dialog {
-            border: none;
-            border-radius: 8px;
-            padding: 1.5rem;
-            max-width: 400px;
-        }
-    
-        dialog::backdrop {
-            background: rgba(0, 0, 0, 0.6);
-        }
+    .membership-card{
+        text-align: center;
+        background-color: #ffffff;
+        margin: 1.5rem;
+        padding-top: 9px;
+        border-bottom: 9px;
+        border-top-left-radius: 34px;
+        border-bottom-right-radius: 34px;
+        opacity: 0;
+        box-shadow: 0 10px 25px rgba(red, green, blue, alpha);
+        transform: scale(0.8) translateY(20px);
+        animation: popUp 0.6s cubic-bezier(.34,1.56,.64,1) forwards;
+    }
 
+    @keyframes popUp {
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    form label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        min-height: 1000x;
+    }
+        
     /* ===== HERO ===== */
     .hero {
         position: relative;
@@ -134,7 +120,7 @@
         margin: 0 auto;
         padding: 0 2rem 2rem;
     }
-
+/*---INDEX---*/
     .info-grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
