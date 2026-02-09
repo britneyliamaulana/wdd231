@@ -67,6 +67,9 @@ header img {
     height: auto;
 }
 
+
+
+
 /* ===== NAVIGATION ===== */
 nav a {
     display: block;
@@ -251,8 +254,9 @@ a.event-link{
     height: 32px;
 }
 
+/*SMALL SCREENSSS*/
 
-@media (max-width: 768px) {
+@media (max-width: 599px) {
     header h4 {
             color: #ffffff;
             font-size: 19px;
@@ -329,12 +333,63 @@ a.event-link{
        
     }
 
+
+        .discover-grid {
+            display: grid;
+            gap: 1rem;
+            padding: 0.75rem;
+        }
+    
+        .discover-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+    
+        .discover-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+        }
+    
+        .discover-text {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .discover-card h3 {
+            margin: 0 0 0.5rem;
+        }
+    
+        .discover-card p {
+            margin: 0 0 0.5rem;
+            font-size: 0.9rem;
+        }
+    
+        .discover-card address {
+            margin: 0 0 0.75rem;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+    
+        .learn-more {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 999px;
+        }
+
+
     .info-grid {
         display: grid;
         gap: 1rem;
         padding: 0.4rem;
         margin-bottom: 25px;
     }
+
 
 
     .spotlight-card {
@@ -370,6 +425,24 @@ a.event-link{
         color: #fff;
         padding: 1rem;
     }
+
+    /*dISCOVER*/
+
+        .learn-more {
+            margin-top: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+    
+        .learn-more:hover {
+            background-color: #555;
+        }
 
     .social a {
       margin: 0 0.5rem;
