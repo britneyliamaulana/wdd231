@@ -48,7 +48,13 @@
         /* show nav on desktop */
     }
 
-
+ #visit-message {
+    margin: 12px;
+  padding: 14px;
+    border-left: 5px solid #0077b6;
+    background-color: #f0f8ff;
+  
+ }
 
 /* Discover grid */
 .discover-grid {

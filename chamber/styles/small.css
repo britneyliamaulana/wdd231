@@ -426,7 +426,74 @@ a.event-link{
         padding: 1rem;
     }
 
-    /*dISCOVER*/
+        /* =========================
+       Visitor Message
+       ========================= */
+        #visit-message {
+            background-color: #f0f8ff;
+            border-left: 5px solid #0077b6;
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 0.95rem;
+        }
+    
+        /* =========================
+       Discover Grid
+       ========================= */
+        .discover-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+    
+        /* =========================
+       Discover Cards
+       ========================= */
+        .discover-card {
+            background: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .discover-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    
+        .discover-text {
+            padding: 1rem;
+        }
+    
+        .discover-text h3 {
+            margin-top: 0;
+        }
+    
+        .learn-more {
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #0077b6;
+            color: #fff;
+            cursor: pointer;
+        }
+    
+        .learn-more:hover {
+            background-color: #005f8a;
+        }
+
+                /* =========================
+           Visitor Message
+           ========================= */
+                #visit-message {
+                    background-color: #f0f8ff;
+                    border-left: 5px solid #0077b6;
+                    padding: 1rem;
+                    margin: 1rem;
+                    font-size: 0.95rem;
+                }
 
         .learn-more {
             margin-top: 0.75rem;
