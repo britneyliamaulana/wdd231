@@ -75,10 +75,16 @@
 
 /* Image */
 .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
     width: 160px;
     height: 190px;
     object-fit: cover;
     border-radius: 6px;
+}
+
+.discover-card img:hover {
+    transform: scale(1.08);
+    filter: grayscale(20%) contrast(110%);
 }
 
 /* Text column */
