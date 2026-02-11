@@ -18,10 +18,23 @@
         font-size: 1.4rem;
     }
 
-    .hero {
-        padding: 1.2rem;
-    }
-
+        .hero {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+    
+        .hero-image {
+            margin-top: 1.5rem;
+        }
+    
+        .hero-image img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
     .grid {
         grid-template-columns: 1fr;
         padding: 10px;
