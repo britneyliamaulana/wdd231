@@ -1,0 +1,108 @@
+/* ===== FOOTER ===== */
+
+
+/* ============================
+   MOBILE RESPONSIVE (500px ↓)
+==============================*/
+@media (max-width: 500px) {
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 1.2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+    }
+
+        .grid img {
+            width: 70%;
+            border-radius: 6px;
+        }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    form {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 1rem;
+    }
+
+    /* MOBILE NAVIGATION */
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #E7C6C2;
+        padding: 1rem;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    #hamburger {
+        display: block;
+        margin: 10px auto;
+        padding: 3rem;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+        .social a {
+            margin: 0 0.5rem;
+            color: #000000;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    
+        footer {
+            background-color:#E7C6C2;
+            color: #090909;
+            padding: 12px;
+        }
+    
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.5rem;
+        }
+    
+        .footer-left h4 {
+            font-size: 1.2rem;
+        }
+        
+
+
+}

@@ -1,0 +1,46 @@
+/* DESKTOP GRID */
+@media (min-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+        footer {
+    
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            padding: 1rem 2rem;
+            align-items: center;
+            color: #000000;
+            
+        }
+    
+        .footer-left h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        .footer-left p,
+        .footer-right p {
+            font-size: 1rem;
+            margin: 0.25rem 0;
+        }
+    
+        .footer-center {
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+    
+        .footer-center img {
+            width: 32px;
+            height: 32px;
+        }
+    
+        .social a {
+            margin: 0 0.5rem;
+            color: #000000;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        
+}
