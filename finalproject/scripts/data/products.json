@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Blush Flower Wrap Maxi Dress",
+        "description": "Lightweight chiffon summer dress with a flattering wrap design.",
+        "type": "dress",
+        "img": "images/wrapdress.jpg",
+        "price": "$120"
+    },
+    {
+        "name": "Blush Maxi Layered Skirt",
+        "description": "Cotton skirt with layered flow, comfortable for casual wear.",
+        "type": "skirt",
+        "img": "images/maxiskirt.jpg",
+        "price": "$80"
+    },
+    {
+        "name": "Chiffon Blouse",
+        "description": "Made of lightweight lace, breathable and perfect for summer weather.",
+        "type": "top",
+        "img": "images/blouse.jpg",
+        "price": "$50"
+    },
+    {
+        "name": "Black Pleated Dress",
+        "description": "Elegant pleated dress suitable for professional and formal events.",
+        "type": "dress",
+        "img": "images/pleateddress.jpg",
+        "price": "$130"
+    },
+    {
+        "name": "Polka Dot Blouse",
+        "description": "Playful polka dot blouse, versatile for both casual and office wear.",
+        "type": "top",
+        "img": "images/polka-dot.webp",
+        "price": "$55"
+    },
+    {
+        "name": "Puff Sleeved Pink Dress",
+        "description": "Chic puff-sleeved dress with a feminine silhouette.",
+        "type": "dress",
+        "img": "images/pink-dress.webp",
+        "price": "$125"
+    },
+    {
+        "name": "Navy Midi Skirt",
+        "description": "Classic navy midi skirt with a tailored fit for everyday elegance.",
+        "type": "skirt",
+        "img": "images/navy-skirt.jpg",
+        "price": "$90"
+    },
+    {
+        "name": "Linen Summer Blouse",
+        "description": "Breathable linen blouse, perfect for warm weather comfort.",
+        "type": "top",
+        "img": "images/linen-blouse.jpg",
+        "price": "$60"
+    },
+    {
+        "name": "Green Wrap Dress",
+        "description": "Stylish wrap dress in a bold green shade, ideal for evening outings.",
+        "type": "dress",
+        "img": "images/green-wrap.jpg",
+        "price": "$140"
+    },
+    {
+        "name": "Beige Pleated Skirt",
+        "description": "Neutral pleated skirt that pairs effortlessly with any top.",
+        "type": "skirt",
+        "img": "images/beige-skirt.jpg",
+        "price": "$85"
+    },
+    {
+        "name": "Silk White Blouse",
+        "description": "Luxurious silk blouse with a smooth finish for timeless style.",
+        "type": "top",
+        "img": "images/silk-blouse.jpg",
+        "price": "$70"
+    },
+    {
+        "name": "Red Maxi Dress",
+        "description": "Bold red maxi dress designed to make a statement at any event.",
+        "type": "dress",
+        "img": "images/red-maxi.jpg",
+        "price": "$150"
+    },
+    {
+        "name": "Black Pencil Skirt",
+        "description": "Sophisticated pencil skirt, perfect for office and formal wear.",
+        "type": "skirt",
+        "img": "images/black-skirt.jpg",
+        "price": "$95"
+    },
+    {
+        "name": "Striped Button-Up Shirt",
+        "description": "Smart striped shirt with button-up detail, great for layering.",
+        "type": "top",
+        "img": "images/striped-shirt.jpg",
+        "price": "$65"
+    },
+    {
+        "name": "Floral Summer Dress",
+        "description": "Bright floral dress with a breezy fit, perfect for sunny days.",
+        "type": "dress",
+        "img": "images/floral-dress.jpg",
+        "price": "$135"
+    }
+]

@@ -1,74 +1,145 @@
+// ==============================
+// IMPORT MODULE
+// ==============================
+import { getProducts } from './products.mjs';
 
 
-// Product data
-const products = [
-    { name: "Blush  Flower Wrap Maxi Dress", type: "dress", img: "images/wrapdress.jpg" },
-    { name: "Blush Maxi Layered Skirt", type: "skirt", img: "images/maxiskirt.jpg" },
-    { name: "Chiffon Blouse", type: "top", img: "images/blouse.jpg" },
-    { name: "Black Pleated Dress", type: "dress", img: "images/pleateddress.jpg" },
-    { name: "Polka Dot Blouse", type: "top", img: "images/polka-dot.webp" },
-    { name: "Puff Sleeved Pink Dress", type:"dress", img: "images/pink-dress.webp"}
-];
-
-// Function to build product cards
+// ==============================
+// BUILD PRODUCT CARDS
+// ==============================
 function buildCards(items, containerId) {
     const container = document.getElementById(containerId);
+    if (!container) return;
+
     container.innerHTML = items.map(item => `
-        <div class="card">
-            <img src="${item.img}" loading="lazy" alt="${item.name}">
-            <h3>${item.name}</h3>
-            <p>${item.type}</p>
-        </div>
-    `).join("");
+    <div class="card">
+      <img src="${item.img}" alt="${item.name}" loading="lazy">
+      <h3>${item.name}</h3>
+      <p>${item.type}</p>
+      <p>${item.price}</p>
+    </div>
+  `).join('');
+
+    addModalEvents(items);
 }
 
-// HOME – display featured items
-if (document.getElementById("featuredContainer")) {
-    buildCards(products.slice(0, 3), "featuredContainer");
-}
+// ==============================
+// MODAL FUNCTIONALITY
+// ==============================
+function addModalEvents(products) {
+    const modal = document.getElementById("productModal");
+    const modalInfo = document.getElementById("modalInfo");
+    const closeBtn = document.getElementById("closeModal");
 
-// COLLECTIONS – filtering logic
-if (document.getElementById("collectionsContainer")) {
+    if (!modal || !modalInfo || !closeBtn) return;
 
-    buildCards(products, "collectionsContainer");
+    const cards = document.querySelectorAll(".card");
 
-    const btn = document.getElementById("toggleButton");
-    let showDresses = false;
+    cards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+            const product = products[index];
 
-    btn.addEventListener("click", () => {
-        showDresses = !showDresses;
+            modalInfo.innerHTML = `
+        <img src="${product.img}" alt="${product.name}" style="width:100%;">
+        <h2>${product.name}</h2>
+        <p><strong>Type:</strong> ${product.type}</p>
+        <p><strong>Price:</strong> ${product.price}</p>
+      `;
 
-        if (showDresses) {
-            const dresses = products.filter(p => p.type === "dress");
-            buildCards(dresses, "collectionsContainer");
-            btn.textContent = "Show All";
-        } else {
-            buildCards(products, "collectionsContainer");
-            btn.textContent = "Show Only Dresses";
+            modal.style.display = "block";
+            modal.setAttribute("aria-hidden", "false");
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            modal.setAttribute("aria-hidden", "true");
+        }
+    });
+
+    // Accessibility: close modal with Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "block") {
+            modal.style.display = "none";
+            modal.setAttribute("aria-hidden", "true");
         }
     });
 }
 
-// CONTACT – form handling + localStorage
-if (document.getElementById("contactForm")) {
-    const form = document.getElementById("contactForm");
-    const output = document.getElementById("formOutput");
+// ==============================
+// HOME PAGE – FEATURED
+// ==============================
+async function displayFeatured() {
+    const container = document.getElementById("featuredContainer");
+    if (!container) return;
 
-    form.addEventListener("submit", (e) => {
+    try {
+        const products = await getProducts();
+        buildCards(products.slice(0, 3), "featuredContainer");
+    } catch (error) {
+        console.error("Error fetching featured products:", error);
+        container.innerHTML = "<p>Sorry, featured products could not be loaded.</p>";
+    }
+}
+displayFeatured();
+
+// ==============================
+// COLLECTIONS PAGE – FILTER
+// ==============================
+async function displayCollections() {
+    const container = document.getElementById("collectionsContainer");
+    if (!container) return;
+
+    try {
+        const products = await getProducts();
+        buildCards(products, "collectionsContainer");
+
+        const btn = document.getElementById("toggleButton");
+        let showDresses = false;
+
+        if (btn) {
+            btn.addEventListener("click", () => {
+                showDresses = !showDresses;
+
+                if (showDresses) {
+                    const dresses = products.filter(p => p.type === "dress");
+                    buildCards(dresses, "collectionsContainer");
+                    btn.textContent = "Show All";
+                } else {
+                    buildCards(products, "collectionsContainer");
+                    btn.textContent = "Show Only Dresses";
+                }
+            });
+        }
+    } catch (error) {
+        console.error("Error fetching collections:", error);
+        container.innerHTML = "<p>Sorry, collections could not be loaded.</p>";
+    }
+}
+displayCollections();
+
+// ==============================
+// CONTACT FORM (LOCAL STORAGE)
+// ==============================
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const entry = {
-            name: name.value,
-            email: email.value,
-            message: message.value
+            name: contactForm.name.value,
+            email: contactForm.email.value,
+            message: contactForm.message.value
         };
 
-        // Save to localStorage
         localStorage.setItem("contactEntry", JSON.stringify(entry));
-
-        // Output message
-        output.textContent = `Thank you! Your message has been sent.`;
-
-        form.reset();
+        window.location.href = "thankyou.html";
     });
 }

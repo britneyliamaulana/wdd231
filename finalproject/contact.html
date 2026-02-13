@@ -5,59 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Modest Muse Fashion – Modern Modest Style</title>
-
+    <title>Contact Us – Modest Muse Fashion</title>
     <meta name="description"
-        content="Discover elegant, modern, and modest fashion collections designed to inspire confidence, comfort, and timeless beauty.">
-    <meta name="author" content="Britney Thandeka Maulana">
+        content="Get in touch with Modest Muse Fashion. Send us a message, and we'll respond promptly.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/wdd231/finalproject/images/favicon.png">
-
-
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Modern Modest Fashion by Modest Muse">
-    <meta property="og:description"
-        content="Discover elegant and modern modest fashion designed for confidence, comfort, and timeless everyday style.">
-    <meta property="og:image" content="https://britneyliamaulana.github.io/wdd231/finalproject/images/hero.jpg">
-    <meta property="og:url" content="https://britneyliamaulana.github.io/wdd231/finalproject/">
-    <meta property="og:type" content="website">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- JavaScript -->
-    <script src="scripts/dates.js" defer></script>
+    <script type="module" src="scripts/main.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/main.js" defer></script>
-
 </head>
 
 <body>
 
     <header>
         <h1>Contact Us</h1>
-        <!-- Hamburger Button (visible on small screens) -->
         <button id="hamburger" aria-label="Toggle navigation menu">☰</button>
 
         <nav id="navMenu">
             <a href="index.html">Home</a>
             <a href="collections.html">Collections</a>
             <a href="contact.html" class="active">Contact</a>
-  
         </nav>
     </header>
 
@@ -65,38 +39,32 @@
         <h2>Send a Message</h2>
 
         <form id="contactForm">
-            <form action="thankyou.html" method="get">
-
             <fieldset>
                 <legend>Your Information</legend>
 
                 <label for="name">Name</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
             </fieldset>
 
             <button type="submit">Submit</button>
         </form>
-
-        <p id="formOutput"></p>
-
 
     </main>
 
     <footer>
         <div>
             <p><strong>Modest Muse Fashion</strong></p>
-    
             <p>South Korea, Seoul 999</p>
             <p>info@mmf.org</p>
             <p>(223) 555-2300</p>
         </div>
-    
+
         <div class="social">
             <a href="https://github.com/britneyliamaulana" target="_blank" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
@@ -111,7 +79,7 @@
                 <i class="fa-solid fa-envelope"></i>
             </a>
         </div>
-    
+
         <div>
             <p>&copy; <span id="currentyear"></span> Britney Thandeka Maulana | South Africa</p>
             <p id="lastModified"></p>
@@ -119,7 +87,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -7,16 +7,15 @@
 
     <title>Modest Muse Fashion – Modern Modest Style</title>
 
+    <!-- Meta -->
     <meta name="description"
         content="Discover elegant, modern, and modest fashion collections designed to inspire confidence, comfort, and timeless beauty.">
     <meta name="author" content="Britney Thandeka Maulana">
 
     <!-- Favicon -->
-<link rel="icon" type="image/png" href="/wdd231/finalproject/images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-
-
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Modern Modest Fashion by Modest Muse">
     <meta property="og:description"
         content="Discover elegant and modern modest fashion designed for confidence, comfort, and timeless everyday style.">
@@ -24,7 +23,7 @@
     <meta property="og:url" content="https://britneyliamaulana.github.io/wdd231/finalproject/">
     <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,79 +39,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- JavaScript -->
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/main.js" defer></script>
- 
-</head>
-<body>
+    <script type="module" src="scripts/main.js"></script>
 
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
     <header>
         <h1>Modest Muse Fashion</h1>
-        <!-- Hamburger Button (visible on small screens) -->
+        <p>Your destination for modern, modest fashion pieces.</p>
         <button id="hamburger" aria-label="Toggle navigation menu">☰</button>
 
-        <p>Your destination for modern, modest fashion pieces.</p>
-
         <nav id="navMenu">
-            <a href="index.html" class="active">Home</a>
-            <a href="collections.html" >Collections</a>
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
             <a href="contact.html">Contact</a>
-
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main>
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Elegance Without Compromise</h2>
-            <p>Discover modest fashion that blends comfort, coverage, and style.</p>
-        </div>
-    
-        <div class="hero-image">
-            <img src="images/hero.jpg" alt="Model wearing elegant modest fashion">
-        </div>
-    </section>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Elegance Without Compromise</h2>
+                <p>Discover modest fashion that blends comfort, coverage, and style.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Model wearing elegant modest fashion" loading="lazy">
+            </div>
+        </section>
 
-
+        <!-- FEATURED -->
         <section class="featured">
             <h2>Featured Items</h2>
             <div class="grid" id="featuredContainer"></div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div>
             <p><strong>Modest Muse Fashion</strong></p>
-           
             <p>South Korea, Seoul 999</p>
-            <p>info@mmf.org</p>
+            <p><a href="mailto:info@mmf.org">info@mmf.org</a></p>
             <p>(223) 555-2300</p>
         </div>
-    
-        <div class="social">
-            <a href="https://github.com/britneyliamaulana" target="_blank" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/britneymaulana/" target="_blank" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com/britneyslia" target="_blank" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:maulanathandeka@gmail.com" aria-label="Email">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-        
-        <div>
-        <p>&copy; <span id="currentyear"></span> Britney Thandeka Maulana | South Africa</p>
-        <p id="lastModified"></p>
-        <a href="references.html">References</a>
-    </div>
-    </footer>
-      
 
+        <div class="social">
+            <a href="https://github.com/britneyliamaulana" target="_blank" aria-label="GitHub"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/britneymaulana/" target="_blank" aria-label="LinkedIn"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/britneyslia" target="_blank" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:maulanathandeka@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <div>
+            <p>&copy; <span id="currentyear"></span> Britney Thandeka Maulana | South Africa</p>
+            <p id="lastModified"></p>
+            <a href="references.html">References</a> |
+            <a href="https://youtube.com/your-video-link" target="_blank">Project Demo Video</a>
+        </div>
+    </footer>
+
+    <!-- PRODUCT MODAL -->
+    <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalInfo">
+        <div class="modal-content">
+            <button id="closeModal" aria-label="Close modal">&times;</button>
+            <div id="modalInfo"></div>
+        </div>
+    </div>
 </body>
 
 </html>
